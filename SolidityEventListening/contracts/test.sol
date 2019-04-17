@@ -5,7 +5,7 @@ contract EventTest {
    string fName;
    uint age;
    
-   event Instructor(string n, uint a);
+   event Instructor(string name, uint age);
    
    function setInstructor(string _fName, uint _age) public {
        fName = _fName;

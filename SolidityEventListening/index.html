@@ -42,62 +42,62 @@
        web3.eth.defaultAccount = web3.eth.accounts[0];
 
        var eventTestContract = web3.eth.contract([
-        {
-            "constant": false,
-            "inputs": [
-                {
-                    "name": "_fName",
-                    "type": "string"
-                },
-                {
-                    "name": "_age",
-                    "type": "uint256"
-                }
-            ],
-            "name": "setInstructor",
-            "outputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "getInstructor",
-            "outputs": [
-                {
-                    "name": "",
-                    "type": "string"
-                },
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "name": "n",
-                    "type": "string"
-                },
-                {
-                    "indexed": false,
-                    "name": "a",
-                    "type": "uint256"
-                }
-            ],
-            "name": "Instructor",
-            "type": "event"
-        }
-    ]);
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_fName",
+				"type": "string"
+			},
+			{
+				"name": "_age",
+				"type": "uint256"
+			}
+		],
+		"name": "setInstructor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getInstructor",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "age",
+				"type": "uint256"
+			}
+		],
+		"name": "Instructor",
+		"type": "event"
+	}
+]);
 
-        var eventTest =  eventTestContract.at("0x3a68471d236cff9e226906f1ee4732e02d528e28");
+        var eventTest =  eventTestContract.at("0x2528ae794d9a4464cbac57593b6c9d2be9592042");
         
         instructorEvent = eventTest.Instructor();
 
